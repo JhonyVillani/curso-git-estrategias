@@ -16,14 +16,25 @@
 		
 		<div class="row">
 			<div class="col border">
-				<p>Realizando um pull request</p>
-				<ul>
-					<li>Com um projeto já criado, um outro desenvolvedor pode fazer um pull request</li>
-					<li>Porém ele terá que realizar um fork primeiro, clonando o repositório para si</li>
-					<li>Realizando um push para seu repositório clonado</li>
-					<li>Depois retornando ao repositório inicial com um pedido de pull request</li>
-					<li>Caberá ao Owner aceitar o Merge desta requisição</li>
-				</ul>
+				<dl>
+					<dt>Realizando um pull request</dt>
+					<dd>Com um projeto já criado, um outro desenvolvedor pode fazer um pull request</dd>
+					<dd>Porém ele terá que realizar um fork primeiro, clonando o repositório para si</dd>
+					<dd>Realizando um push para seu repositório clonado</dd>
+					<dd>Depois retornando ao repositório inicial com um pedido de pull request</dd>
+					<dd>Caberá ao Owner aceitar o Merge desta requisição</dd>
+				</dl>
+			</div>
+			
+			<div class="col border">
+				<dl>
+					<dt>Unindo commits</dt>
+					<dd>Outro desenvolvedor com um fork já criado pode realizar as alterações requisitadas em uma issue</dd>
+					<dd>Criando um commit "Trocando UL por DL"</dd>
+					<dd>Também criou dois novos commits "Separando titulo" e "Adicionando quebra de linha"</dd>
+					<dd>Porém caso ele envie via pull request, o Owner terá que avaliar 3 commits desnecessários</dd>
+					<dd>Neste caso podemos fazer um git rebase -i HEAD~3 para unir os 3 últimos commits</dd>
+				<dl>
 			</div>
 		</div>
 	</div>
