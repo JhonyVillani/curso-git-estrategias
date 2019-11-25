@@ -15,7 +15,7 @@
 		</div>
 		
 		<div class="row">
-			<div class="col border">
+			<div class="col-4 border">
 				<dl>
 					<dt>Realizando um pull request</dt>
 					<dd>Com um projeto já criado, um outro desenvolvedor pode fazer um pull request</dd>
@@ -26,7 +26,7 @@
 				</dl>
 			</div>
 			
-			<div class="col border">
+			<div class="col-4 border">
 				<dl>
 					<dt>Unindo commits</dt>
 					<dd>Outro desenvolvedor com um fork já criado pode realizar as alterações requisitadas em uma issue</dd>
@@ -37,7 +37,7 @@
 				<dl>
 			</div>
 			
-			<div class="col border">
+			<div class="col-4 border">
 				<dl>
 					<dt>Criando uma nova branch</dt>
 					<dd>Utilizando o comando git checkout -b novo-release criamos uma nova branch</dd>
@@ -47,7 +47,26 @@
 					<dd>Voltaremos para git checkout master e realizaremos o comando cherry-pick hashCopiado</dd>
 					<dd>Desta forma trazemos aquele commit específico para a branch master</dd>
 					<dd>Podemos realizar um rebase novo-release para trazer todos os commits em nossa master</dd>
-					
+				</dl>
+			</div>
+			
+			<div class="col-4 border">
+				<dl>
+					<dt>Identificando um estado do código com bisect</dt>
+					<dd>Suponha que houve uma alteração e queremos identificar o exato commit</dd>
+					<dd>Executando o comando git bisect start iniciará a busca do lado do Git</dd>
+					<dd>Ao executar git bisect bad HEAD, devemos informar o commit que possivelmente está bom git bisect good hashDoLimite</dd>
+					<dd>Caso não seja o commit correto digitamos git bisect bad, mas como já estamos no desejado, digitaremos git bisect good</dd>
+					<dd>Após a revisão, se tudo estiver certo, git bisect reset para retornar à master com o hash do commit indesejado</dd>
+					<dd>Podemos verificar as alterações com git show hash, e reverter com git revert hash</dd>
+				</dl>
+			</div>
+			
+			<div class="col-4 border">
+				<dl>
+					<dt>Identificando o responsável por cada linha</dt>
+					<dd>Utilizando o comando git blame index.html, o git mostrará quem é o responsável e commit foi introduzido</dd>
+					<dd>Nunca devemos utilizar esta ferramenta para encontrar culpados, e sim aprender com eles</dd>
 				</dl>
 			</div>
 		</div>
