@@ -107,7 +107,7 @@
 				</dl>
 			</div>
 			
-			<div class="col-4 border">
+			<div class="col-12 border">
 				<dl>
 					<dt>Correção de bugs na master?</dt>
 					<dd>Por mais urgente que seja corrigir um bug na master, não é boa prática</dd>
@@ -116,8 +116,12 @@
 					<dd>Realizaremos um git commit -m "Removendo bug x"</dd>
 					<dd>Agora um checkout master e um merge do hotfix</dd>
 					<dd>Um merge na master? Ha uma nova versão da master, faremos um git tag -a v0.1.1</dd>
-					<dd>Faremos também checkout na development e merge do hotfix para trazer as correções da master</dd>
-					<dd></dd>
+					<dd>Faremos também checkout na development e merge do hotfix/v0.1.1 para trazer as correções da master</dd>
+					<dd>Agora temos a branch development atualizada, faremos um git checkout -b release/v0.2.0 </dd>
+					<dd>Se houver mais algum detalhe/bug, podemos adicionar direto na branch de release</dd>
+					<dd>Realizaremos um commit, estando tudo OK, podemos colocar em produção</dd>
+					<dd>Faremos um checkout na master novamente, um merge release/v0.2.0</dd>
+					<dd>git tag -a v0.2.0 -m "Novo conteudo adicionado"</dd>
 				</dl>
 			</div>
 		</div>
