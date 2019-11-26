@@ -72,10 +72,38 @@
 			
 			<div class="col-4 border">
 				<dl>
+					<dt>Master e produção </dt>
+					<dd>Não é uma regra, mas por convenção, os códigos contidos na branch master estão prontos para produção</dd>
+					<dd>É utilizada como linha principal de desenvolvimento, na qual os trabalhos já chegam prontos</dd>
+					<dd>É necessário ter várias branchs de desenvolvimento (nada impede de commitar direto na master)</dd>
+					<dd>Mas é boa prática apenas commits testados e funcionais na master</dd>
+					<dd>O comando git log --graph nos mostra os commits e linhas de desenvolvimento</dd>
+				</dl>
+			</div>
+			
+			<div class="col-6 border">
+				<dl>
+					<dt>Mais branches</dt>
+					<dd>Para remover branches não utilizados, o comando git branch exibirá todos</dd>
+					<dd>O comando git branch -d nomeDaBranch excluirá o mesmo</dd>
+					<dd>Caso este branch esteja à frente da master, haverá conflitos, será necessário git branch -D nomeDaBranch</dd>
+					<dd>Vamos criar git branch development</dd>
+					<dd>git checkout development seleciona esta branch</dd>
+					<dd>Partindo desta branch vamos criar uma nova, git checkout -b feature/passos-criando-branches</dd>
+					<dd>Utilizar feature/ também é uma convenção</dd>
+				</dl>
+			</div>
+			
+			<div class="col-6 border">
+				<dl>
 					<dt>Enquanto isso em outra branch</dt>
 					<dd>Faremos um git checkout development</dd>
 					<dd>Agora git checkout -b feature/testando-outra-branch</dd>
 					<dd>E um git commit -m "Testando commits em outra branch"</dd>
+					<dd>Voltamos com git checkout development</dd>
+					<dd>Realizaremos um git merge feature/... em ambas branches</dd>
+					<dd>Ocorrerá um conflito, devemos apenas organizar o código, não haverá nada a ser sobrescrito</dd>
+					<dd>Feito isso, ainda precisamos realizar um add, commit e confirmar o merge com :x</dd>
 				</dl>
 			</div>
 		</div>
