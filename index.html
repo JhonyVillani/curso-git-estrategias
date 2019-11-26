@@ -106,6 +106,20 @@
 					<dd>Feito isso, ainda precisamos realizar um add, commit e confirmar o merge com :x</dd>
 				</dl>
 			</div>
+			
+			<div class="col-4 border">
+				<dl>
+					<dt>Correção de bugs na master?</dt>
+					<dd>Por mais urgente que seja corrigir um bug na master, não é boa prática</dd>
+					<dd>Faremos um git checkout -b hotfix/v0.1.1</dd>
+					<dd>Alteraremos o bug que havia na master</dd>
+					<dd>Realizaremos um git commit -m "Removendo bug x"</dd>
+					<dd>Agora um checkout master e um merge do hotfix</dd>
+					<dd>Um merge na master? Ha uma nova versão da master, faremos um git tag -a v0.1.1</dd>
+					<dd>Faremos também checkout na development e merge do hotfix para trazer as correções da master</dd>
+					<dd></dd>
+				</dl>
+			</div>
 		</div>
 	</div>
 </body>
